@@ -28,16 +28,19 @@ namespace Question1.CQRS_Mediator.Library.DataAccess
                 {
                     if (item.Type.ToLower().Trim() == "open")
                     {
-                        monday += dateTime.AddSeconds(item.Value).ToString("hh tt");
+                        monday += dateTime.AddSeconds(item.Value).ToString("hh tt") + "  - ";
                     }
                     else if (item.Type.ToLower().Trim() == "close")
                     {
-                        monday += " - " + dateTime.AddSeconds(item.Value).ToString("hh tt") + ", ";
+                        monday +=  dateTime.AddSeconds(item.Value).ToString("hh tt") + ", ";
                     }
                     else if (item.Type.ToLower().Trim() != "open" && item.Type.ToLower().Trim() != "close")
                     {
                         monday += "Closed";
                     }
+                }
+                {
+                    monday += "Closed";
                 }
                 result.Add(monday);
             }
@@ -51,16 +54,19 @@ namespace Question1.CQRS_Mediator.Library.DataAccess
                 {
                     if (item.Type.ToLower().Trim() == "open")
                     {
-                        tuesday += dateTime.AddSeconds(item.Value).ToString("hh tt");
+                        tuesday += dateTime.AddSeconds(item.Value).ToString("hh tt") + "  - ";
                     }
                     else if (item.Type.ToLower().Trim() == "close")
                     {
-                        tuesday += " - " + dateTime.AddSeconds(item.Value).ToString("hh tt") + ", ";
+                        tuesday +=  dateTime.AddSeconds(item.Value).ToString("hh tt") + ", ";
                     }
                     else if (item.Type.ToLower().Trim() != "open" && item.Type.ToLower().Trim() != "close")
                     {
                         tuesday += "Closed";
                     }
+                }
+                {
+                    tuesday += "Closed";
                 }
                 result.Add(tuesday);
 
@@ -74,18 +80,20 @@ namespace Question1.CQRS_Mediator.Library.DataAccess
                 {
                     if (item.Type.ToLower().Trim() == "open")
                     {
-                        wednesday += dateTime.AddSeconds(item.Value).ToString("hh tt");
+                        wednesday += dateTime.AddSeconds(item.Value).ToString("hh tt") + "  - ";
                     }
                     else if (item.Type.ToLower().Trim() == "close")
                     {
-                        wednesday += " - " + dateTime.AddSeconds(item.Value).ToString("hh tt") + " ";
+                        wednesday +=  dateTime.AddSeconds(item.Value).ToString("hh tt") + " ";
                     }
                     else if (item.Type.ToLower().Trim() != "open" && item.Type.ToLower().Trim() != "close")
                     {
                         wednesday += "Closed";
                     }
                 }
-
+                {
+                    wednesday += "Closed";
+                }
                 result.Add(wednesday);
             }
 
@@ -98,18 +106,20 @@ namespace Question1.CQRS_Mediator.Library.DataAccess
                 {
                     if (item.Type.ToLower().Trim() == "open")
                     {
-                        thursday += dateTime.AddSeconds(item.Value).ToString("hh tt");
+                        thursday += dateTime.AddSeconds(item.Value).ToString("hh tt") + "  - ";
                     }
                     else if (item.Type.ToLower().Trim() == "close")
                     {
-                        thursday += " - " + dateTime.AddSeconds(item.Value).ToString("hh tt") + " ";
+                        thursday +=  dateTime.AddSeconds(item.Value).ToString("hh tt") + " ";
                     }
                     else if (item.Type.ToLower().Trim() != "open" && item.Type.ToLower().Trim() != "close")
                     {
                         thursday += "Closed";
                     }
                 }
-
+                {
+                    thursday += "Closed";
+                }
                 result.Add(thursday);
             }
 
@@ -121,18 +131,20 @@ namespace Question1.CQRS_Mediator.Library.DataAccess
                 {
                     if (item.Type.ToLower().Trim() == "open")
                     {
-                        friday += dateTime.AddSeconds(item.Value).ToString("hh tt");
+                        friday += dateTime.AddSeconds(item.Value).ToString("hh tt") + "  - ";
                     }
                     else if (item.Type.ToLower().Trim() == "close")
                     {
-                        friday += " - " + dateTime.AddSeconds(item.Value).ToString("hh tt") + " ";
+                        friday += dateTime.AddSeconds(item.Value).ToString("hh tt") + " ";
                     }
                     else if (item.Type.ToLower().Trim() != "open" && item.Type.ToLower().Trim() != "close")
                     {
                         friday += "Closed";
                     }
                 }
-
+                {
+                    friday += "Closed";
+                }
                 result.Add(friday);
             }
 
@@ -144,18 +156,20 @@ namespace Question1.CQRS_Mediator.Library.DataAccess
                 {
                     if (item.Type.ToLower().Trim() == "open")
                     {
-                        saturday += dateTime.AddSeconds(item.Value).ToString("hh tt");
+                        saturday += dateTime.AddSeconds(item.Value).ToString("hh tt") + "  - ";
                     }
                     else if (item.Type.ToLower().Trim() == "close")
                     {
-                        saturday += " - " + dateTime.AddSeconds(item.Value).ToString("hh tt") + " ";
+                        saturday +=  dateTime.AddSeconds(item.Value).ToString("hh tt") + " ";
                     }
                     else if (item.Type.ToLower().Trim() != "open" && item.Type.ToLower().Trim() != "close")
                     {
                         saturday += "Closed";
                     }
                 }
-
+                {
+                    saturday += "Closed";
+                }
                 result.Add(saturday);
             }
 
@@ -168,11 +182,11 @@ namespace Question1.CQRS_Mediator.Library.DataAccess
                 {
                     if (item.Type.ToLower().Trim() == "open")
                     {
-                        sunday += dateTime.AddSeconds(item.Value).ToString("hh tt");
+                        sunday += dateTime.AddSeconds(item.Value).ToString("hh tt") +"  - ";
                     }
                     else if (item.Type.ToLower().Trim() == "close")
                     {
-                        sunday += " - " + dateTime.AddSeconds(item.Value).ToString("hh tt")+ " ";
+                        sunday +=   dateTime.AddSeconds(item.Value).ToString("hh tt")+ " ";
                     }
                     else if (item.Type.ToLower().Trim() != "open" && item.Type.ToLower().Trim() != "close")
 
@@ -180,7 +194,9 @@ namespace Question1.CQRS_Mediator.Library.DataAccess
                         sunday += "Closed";
                     }
                 }
-
+                {
+                    sunday += "Closed";
+                }
                 result.Add(sunday);
             }
 
